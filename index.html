@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shelf Notes</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f5f2e9;color:#173c35;font:1rem/1.6 "DM Sans",system-ui,sans-serif}
+main{max-width:44rem;margin:7vh auto;padding:1.5rem}h1{font:normal clamp(3rem,10vw,5rem)/1 Georgia,serif;margin:0 0 2rem}
+form{display:grid;gap:.6rem}label,h2{font-weight:650}textarea{resize:vertical;min-height:6rem;border:1px solid #777f75;padding:1rem;font:inherit;border-radius:.4rem}
+button{justify-self:start;background:#194f43;color:white;border:0;padding:.7rem 1.3rem;border-radius:.4rem;font:inherit;cursor:pointer}section{margin-top:2.5rem}ul{padding:0;list-style:none}li{padding:1rem 0;border-top:1px solid #c5cabd;overflow-wrap:anywhere;white-space:pre-wrap}
+</style>
+<main><h1>Shelf Notes</h1><form action="/notes" method="post"><label for="note">Store handover note</label>
+<textarea id="note" name="note" maxlength="200" required placeholder="What should the next shift know?"></textarea>
+<button type="submit">Save note</button></form><section><h2>Recent notes</h2><ul><!-- notes --></ul></section></main></html>

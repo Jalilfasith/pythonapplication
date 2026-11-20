@@ -1,0 +1,20 @@
+name: shelf-notes
+services:
+  web:
+    build: .
+    ports:
+      - "19437:19337"
+    volumes:
+      - notes-data:/data
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:19337/health', timeout=3).close()"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+volumes:
+  notes-data:
